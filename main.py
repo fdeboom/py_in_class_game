@@ -12,7 +12,7 @@ y_coordinate = 400
 running = True
 while running:
     for event in pygame.event.get():
-        pygame.draw.rect(screen, (0, 0, 255), (x_coordinate, y_coordinate, 300, 200))
+        pygame.draw.rect(screen, (0, 0, 255), (x_coordinate, y_coordinate, 50, 50))
 
     button = pygame.key.get_pressed()
 
@@ -24,9 +24,17 @@ while running:
         y_coordinate += 1
     if button[pygame.K_UP]:
         y_coordinate -= 1
+    if x_coordinate < 0:
+        x_coordinate = 0
+    if y_coordinate > 1200:
+        y_coordinate = 1200
+    if y_coordinate > 800:
+        y_coordinate = 800
+    if y_coordinate < 0:
+        y_coordinate = 0
 
     if button[pygame.K_ESCAPE]:
         running = False
 
-
+    pygame.time.Clock().tick(60)
     pygame.display.flip()  # updates your changes at the end of loop

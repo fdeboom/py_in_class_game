@@ -1,5 +1,5 @@
 import pygame
-
+import random
 
 pygame.init()
 
@@ -12,7 +12,7 @@ y_coordinate = 400
 running = True
 while running:
     for event in pygame.event.get():
-        pygame.draw.rect(screen, (0, 0, 255), (x_coordinate, y_coordinate, 50, 50))
+        pygame.draw.rect(screen, (random.randint(0,255), random.randint(0,255), random.randint(0,255)), (x_coordinate, y_coordinate, 50, 50))
 
     button = pygame.key.get_pressed()
 

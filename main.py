@@ -36,8 +36,7 @@ while running:
 
     if button[pygame.K_ESCAPE]:
         running = False
-    if event.
-
-
+    if event.type == pygame.QUIT:
+        break
     pygame.time.Clock().tick(60)
     pygame.display.flip()  # updates your changes at the end of loop

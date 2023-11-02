@@ -1,5 +1,6 @@
 import pygame
 import random
+import sys
 
 pygame.init()
 
@@ -35,6 +36,8 @@ while running:
 
     if button[pygame.K_ESCAPE]:
         running = False
+    if event.
+
 
     pygame.time.Clock().tick(60)
     pygame.display.flip()  # updates your changes at the end of loop
